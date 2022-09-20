@@ -86,5 +86,6 @@ class ProductScreen extends StatelessWidget {
     for (var element in rawProduct) {
       pController.products.value.add(Product.fromJson(element));
     }
+    pController.products.refresh();
   }
 }

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:golden_shoes/src/ui/cart_screen/cart_viewmodel.dart';
 import 'dart:math';
-import 'dart:developer' as dev;
 
 import 'package:golden_shoes/src/utils/color.dart';
 
@@ -12,9 +11,10 @@ import '../../core/model/product.dart';
 import '../common/commonWidget.dart';
 
 class ProductItem extends StatelessWidget {
-  const ProductItem({super.key, required this.product});
+  ProductItem({super.key, required this.product});
 
   final Product product;
+  final CartScreenController c = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -67,22 +67,28 @@ class ProductItem extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                CartScreenController c = Get.find();
-                c.cartProducts.value.add(product);
+                c.cartProducts.value[product] = 1;
+                c.cartProducts.refresh();
+                c.caculateTotalCash();
               },
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                     color: yellowColor,
                     borderRadius: BorderRadius.circular(100)),
-                child: const Center(
-                    child: Text(
-                  'ADD TO CART',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 14,
-                      color: blackColor),
-                )),
+                child: Center(
+                    child: Obx(() => c.cartProducts.value.containsKey(product)
+                        ? Image.asset(
+                            'assets/check.png',
+                            height: 17,
+                          )
+                        : const Text(
+                            'ADD TO CART',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 14,
+                                color: blackColor),
+                          ))),
               ),
             ),
           ],

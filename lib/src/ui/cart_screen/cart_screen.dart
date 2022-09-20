@@ -41,22 +41,20 @@ class CartScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  ScreenTitle(title: 'Your cart'),
-                  ScreenTitle(title: '\$1241'),
+                children: [
+                  const ScreenTitle(title: 'Your cart'),
+                  Obx(() => ScreenTitle(title: '\$${c.totalCash.value}')),
                 ],
               ),
-              const Expanded(
+              Expanded(
                 child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: CartItem(),
-                  // child: Obx(() => Column(
-                  //       mainAxisSize: MainAxisSize.min,
-                  //       children: c.cartProducts.value
-                  //           .map((product) => Text(product.name))
-                  //           .toList(),
-                  //     ))
-                ),
+                    physics: const BouncingScrollPhysics(),
+                    child: Obx(() => Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: c.cartProducts.value.entries
+                              .map((entry) => CartItem(product: entry.key))
+                              .toList(),
+                        ))),
               ),
             ],
           )),
