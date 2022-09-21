@@ -43,7 +43,7 @@ class CartScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const ScreenTitle(title: 'Your cart'),
-                  Obx(() => ScreenTitle(title: '\$${c.totalCash.value}')),
+                  Obx(() => ScreenTitle(title: '\$ ${c.totalCash.value}')),
                 ],
               ),
               Expanded(

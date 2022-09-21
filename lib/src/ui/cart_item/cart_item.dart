@@ -61,9 +61,11 @@ class CartItem extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                    '\$${product.price}',
+                    '\$ ${product.price}',
                     style: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: blackColor),
                   ),
                   const SizedBox(
                     height: 15,

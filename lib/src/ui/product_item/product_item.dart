@@ -61,7 +61,7 @@ class ProductItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '\$${product.price}',
+              '\$ ${product.price}',
               style: const TextStyle(
                   fontWeight: FontWeight.bold, fontSize: 18, color: blackColor),
             ),
@@ -110,6 +110,7 @@ class ProductItem extends StatelessWidget {
 
   Widget productName(String text) => Text(
         text,
-        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        style: const TextStyle(
+            fontSize: 22, fontWeight: FontWeight.bold, color: blackColor),
       );
 }
