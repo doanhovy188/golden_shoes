@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: GoogleFonts.rubik().fontFamily,
-        backgroundColor: whiteColor,
+        scaffoldBackgroundColor: whiteColor,
         primarySwatch: Colors.blue,
       ),
       home: ProductScreen(),

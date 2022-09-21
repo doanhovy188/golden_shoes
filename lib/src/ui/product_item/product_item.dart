@@ -70,6 +70,7 @@ class ProductItem extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
+                if (c.cartProducts.value.containsKey(product)) return;
                 c.cartProducts.value[product] = 1;
                 c.cartProducts.refresh();
                 c.caculateTotalCash();

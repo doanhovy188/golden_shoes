@@ -49,12 +49,14 @@ class CartScreen extends StatelessWidget {
               Expanded(
                 child: SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
-                    child: Obx(() => Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: c.cartProducts.value.entries
-                              .map((entry) => CartItem(product: entry.key))
-                              .toList(),
-                        ))),
+                    child: Obx(() => c.cartProducts.value.isEmpty
+                        ? const Text('Your cart is empty.')
+                        : Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: c.cartProducts.value.entries
+                                .map((entry) => CartItem(product: entry.key))
+                                .toList(),
+                          ))),
               ),
             ],
           )),
