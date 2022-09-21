@@ -21,30 +21,33 @@ class ProductItem extends StatelessWidget {
     return Center(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Container(
+          width: double.infinity,
           decoration: BoxDecoration(
               color: Color(product.colorHex()),
               borderRadius: const BorderRadius.all(Radius.circular(30))),
-          child: Stack(children: [
-            ClipRRect(
-              child: ImageFiltered(
-                imageFilter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Opacity(
-                  opacity: 0.2,
-                  child: Transform(
-                    transform: Matrix4.translationValues(-20, 35, 0),
-                    child: Transform.rotate(
-                      angle: -pi / 7.5,
-                      child: Image.network(
-                        product.imageUrl,
-                        color: blackColor,
+          child: Center(
+            child: Stack(children: [
+              ClipRRect(
+                child: ImageFiltered(
+                  imageFilter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Opacity(
+                    opacity: 0.2,
+                    child: Transform(
+                      transform: Matrix4.translationValues(-20, 35, 0),
+                      child: Transform.rotate(
+                        angle: -pi / 7.5,
+                        child: Image.network(
+                          product.imageUrl,
+                          color: blackColor,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            rotateNetWorkImage(product.imageUrl),
-          ]),
+              rotateNetWorkImage(product.imageUrl),
+            ]),
+          ),
         ),
         const SizedBox(
           height: 30,
