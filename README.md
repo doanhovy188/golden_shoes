@@ -1,16 +1,16 @@
 # golden_shoes
 
-A new Flutter project.
+A simple demo app
 
-## Getting Started
+## Screenshot
 
-This project is a starting point for a Flutter application.
+Product Screen:
+![image](https://user-images.githubusercontent.com/64396862/191409801-9d916939-a153-4900-acff-387a390d7528.png)
 
-A few resources to get you started if this is your first Flutter project:
+![image](https://user-images.githubusercontent.com/64396862/191409830-33e29326-a80f-45e0-807e-0ad60e9b405f.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![image](https://user-images.githubusercontent.com/64396862/191409887-128e942e-a96d-4115-a77d-d44ad2fc1e4d.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Cart Screen:
+![image](https://user-images.githubusercontent.com/64396862/191409701-6de8cb59-ee9b-41a1-9dcf-2a980c11c09d.png)
