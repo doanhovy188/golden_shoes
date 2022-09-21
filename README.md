@@ -6,11 +6,12 @@ A simple demo app
 
 Product Screen:
 
-![image](https://user-images.githubusercontent.com/64396862/191409801-9d916939-a153-4900-acff-387a390d7528.png)
-![image](https://user-images.githubusercontent.com/64396862/191409830-33e29326-a80f-45e0-807e-0ad60e9b405f.png)
-![image](https://user-images.githubusercontent.com/64396862/191409887-128e942e-a96d-4115-a77d-d44ad2fc1e4d.png)
+![image](https://user-images.githubusercontent.com/64396862/191410466-be796ec3-0e76-4b12-b622-401ca142c512.png)
+![image](https://user-images.githubusercontent.com/64396862/191410509-7c270606-a230-43d2-a694-e647bceb835a.png)
+![image](https://user-images.githubusercontent.com/64396862/191410554-91afb394-7703-4e65-b875-cfa5ccbb3d72.png)
+
 
 
 Cart Screen:
 
-![image](https://user-images.githubusercontent.com/64396862/191409701-6de8cb59-ee9b-41a1-9dcf-2a980c11c09d.png)
+![image](https://user-images.githubusercontent.com/64396862/191410649-01002dbf-6205-48a7-aa27-1904edf0f9ed.png)
